@@ -1,0 +1,74 @@
+<!--This is a game file that contains the game file-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+  <!--mathjs snd random js library-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js" integrity="sha512-A0sWjJ/e9sQCBmqF/iV7rKJzBq+TdxTwtzGGfIStgGzb+rsWysJ93ZtdfAG+y2gV7owF+ThKWnJyBwzD0CtR8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/random/1.2.0/random.min.js" integrity="sha512-biRou8fJWQy+1wIt0ahQ6U5CxyU5Z6X9Z6U+JzvnyA6hP79zHNoYUNY1xFhNBc5i5gMPj9XthHakU6mzvGlxLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!--guessing game body -->
+  <div id="game-container">
+    <div id="game-position">
+	<h1 class="game-text">Guessing Game</h1>
+	<p class="text">Try to guess the randomly generated number between the given range.</p>
+	<label for="lowest">Lowest number:</label>
+	<input type="number" id="lowest">
+	<br>
+	<label for="highest">Highest number:</label>
+	<input type="number" id="highest">
+	<br>
+	<button onclick="startGame()" id = "game-button">Start Game</button>
+	<br>
+	<div id="game" style="display: none;">
+		<label for="guess">Guess a number:</label>
+		<input type="number" id="guess">
+		<button onclick="makeGuess()">Guess</button>
+		<p id="result"></p>
+		<p id="count"></p>
+	</div>
+    </div>
+  </div>
+	<script>
+		let lowest ,highest, number, currentTrials;
+
+		function startGame() {
+		let	lowest = parseInt(document.getElementById("lowest").value);
+		let	highest = parseInt(document.getElementById("highest").value);
+			//generate random number
+    number = Math.floor(Math.random() * (highest - lowest + 1)) + lowest
+    //generate number of trials
+    trials = Math.floor(Math.log2(highest - lowest + 1)) + 1;
+    currentTrial = 0;
+    alert('You have ' + trials + ' trials to guess the number.Enter valid numbers from range');
+      alert('Please enter valid numbers for the range.');
+			 document.getElementById("game").style.display = "block";
+			document.getElementById("result").innerHTML = "";
+			document.getElementById("count").innerHTML = "";
+		}
+
+//guess button
+		function makeGuess() {
+			const guess = parseInt(document.getElementById("guess").value);
+			if (guess === number) {
+				document.getElementById("result").innerHTML = `Congratulations! You guessed the number ${number} in ${trials} tries.`;
+			}
+      //if guesses are higher than random number or lower
+       else if (guess < number) {
+        alert('Your guess is low :(.We go again.')
+			} else if (guess > number) {
+        alert('Your guess is high :(.We go again.')
+			}
+      else
+      alert('stick to range' )
+    currentTrial++;
+    //if user runs out of trials
+    if (currentTrial > trials) {
+    alert('Waiting for you in round two.');
+    window.location.reload();
+    }
+  }
+	</script>
+</body>
+</html>
