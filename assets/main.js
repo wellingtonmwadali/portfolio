@@ -82,12 +82,19 @@ function handleWindowResize() {
     smallWindow.style.display = "block";
     projectWindow.style.display = "none";
   }
-  else{
+  else if(windowWidth >=1200){
     normalWindow.style.display = "none";
     largeWindow.style.display = "none";
     mediumWindow.style.display = "none";
     smallWindow.style.display = "none";
     projectWindow.style.display = "block";
+  }
+  else{
+    normalWindow.style.display = "block";
+    largeWindow.style.display = "none";
+    mediumWindow.style.display = "none";
+    smallWindow.style.display = "none";
+    projectWindow.style.display = "none";
   }
 }
 

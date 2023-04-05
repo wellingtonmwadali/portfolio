@@ -425,7 +425,7 @@ Large window content*/
   }
 #medium-window{
 	background-color:sienna;
-	/*height: 100vh;*/
+	height: 100vh;
 }
 .kenya{
 	position: absolute;
@@ -506,6 +506,39 @@ Large window content*/
 	height: 500px;
 	width: 500px;
   }
+  .nav-links {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	
+  }
+  
+  .left-button a {
+	display: block;
+	padding: 7px 10px;
+	color: #fff;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+	text-decoration: none;
+  }
+  
+  .left-button a:hover {
+	background-color: #0069d9;
+  }
+  
+  .right-button a {
+	display: block;
+	padding: 7px 10px;
+	color: #fff;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+	text-decoration: none;
+  }
+  
+  .right-button a:hover {
+	background-color: #c82333;
+  }
+  
   /*project page*/
   #project-page{
 	background-color: red;
