@@ -3,30 +3,33 @@
 <html>
 <head>
 	<title>Guessing Game</title>
+	<link rel="stylesheet" href="style.css">
   <!--mathjs snd random js library-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js" integrity="sha512-A0sWjJ/e9sQCBmqF/iV7rKJzBq+TdxTwtzGGfIStgGzb+rsWysJ93ZtdfAG+y2gV7owF+ThKWnJyBwzD0CtR8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/random/1.2.0/random.min.js" integrity="sha512-biRou8fJWQy+1wIt0ahQ6U5CxyU5Z6X9Z6U+JzvnyA6hP79zHNoYUNY1xFhNBc5i5gMPj9XthHakU6mzvGlxLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
+<body style="background-color: rgb(44, 111, 137);">
   <!--guessing game body -->
   <div id="game-container">
     <div id="game-position">
 	<h1 class="game-text">Guessing Game</h1>
-	<p class="text">Try to guess the randomly generated number between the given range.</p>
-	<label for="lowest">Lowest number:</label>
+	<p class="text-intro">The rules are simple.Enter a range of numbers of your choice<br>
+	Then try to guess the lucky number generated from the range.<br>
+You are provided with hints.Good luck :)</p>
+	<label for="lowest"><b>Lowest number:</b></label>
 	<input type="number" id="lowest">
 	<br>
-	<label for="highest">Highest number:</label>
+	<label for="highest"><b>Highest number:</b></label>
 	<input type="number" id="highest">
 	<br>
 	<button onclick="startGame()" id = "game-button">Start Game</button>
 	<br>
 	<div id="game" style="display: none;">
-		<label for="guess">Guess a number:</label>
-		<input type="number" id="guess">
-		<button onclick="makeGuess()">Guess</button>
-		<p id="result"></p>
-		<p id="count"></p>
+	<label for="guess"><b>How lucy are you today?</b></label><br>
+	<input type="number" id="guess"><br>
+	<button onclick="makeGuess()" id = "guess-button">Guess</button>
+	<p id="result"></p>
+	<p id="count"></p>
 	</div>
     </div>
   </div>
@@ -45,7 +48,6 @@
       alert('Please enter valid numbers for the range.');
 			 document.getElementById("game").style.display = "block";
 			document.getElementById("result").innerHTML = "";
-			document.getElementById("count").innerHTML = "";
 		}
 
 //guess button
@@ -61,7 +63,7 @@
         alert('Your guess is high :(.We go again.')
 			}
       else
-      alert('stick to range' )
+      alert('Read the rules again' )
     currentTrial++;
     //if user runs out of trials
     if (currentTrial > trials) {

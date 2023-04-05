@@ -531,6 +531,7 @@ Large window content*/
 	border: 1px solid white;
 	padding: 30px;
   }
+  /*text*/
   .project-text{
 	letter-spacing: -4mm;
 	display: inline-block;
@@ -582,22 +583,38 @@ Large window content*/
 	}
   }
   /*game html*/
-  .container-game {
+  /*game container*/
+#game-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
   }
-.game-position{
+#game-position{
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 }
-  
-  .guess-game{
-	width: 400px;
-	padding: 20px;
-	border: 1px solid black;
-	border-radius: 5px;
-  }
-  
+/*text intro*/
+.text-intro {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+/*input-fields*/
+#lowest, #highest, #guess{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px;
+	border: none;
+	padding: 4px 2px;
+
+}
+#game-button, #guess-button{
+	padding: 10px;
+	border-radius: 99px;
+	border: none;
+	font-weight: bold;
+	box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
