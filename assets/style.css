@@ -18,7 +18,7 @@
 	height: 100vh;
 
 }
-.chat-container {
+.chat-container-one {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
