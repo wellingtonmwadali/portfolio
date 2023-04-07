@@ -249,10 +249,6 @@
 	height: 100vh;
   }
   #findMe .center-one{
-	/*display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;*/
 	position: absolute;
 	top:150%;
 	left: 53%;
@@ -360,15 +356,14 @@
 .myIntro{
 	display: none;
 	position: absolute;
-	top: 173%;
-	left: 25%;
+	top: 102%;
+	left: 42%;
 	background-color: #cfcccc;
-	border-radius: 999px;
+	border-radius: 9px 9px 9px 9px;
 }
 .myself{
-	padding-left: 25px;
+	padding-left: 15px;
 	padding-right: 25px;
-	text-align: center;
 }
 #myImage2{
 	position: absolute;
