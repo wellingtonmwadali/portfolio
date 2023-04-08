@@ -63,19 +63,26 @@ function getHardResponse(userText){
     //$("#chatbox").append(userHtml);
     document.getElementById("textInput").value = "";
     document.getElementById("chatbox").innerHTML += userHtml;
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+   // let chatbot =  document.getElementById("chatbot");
+    //let userMessage = document.createElement('div');
+    //userMessage.innerHTML = userHtml;
+    //chatbot.appendChild(userMessage);
+    //document.getElementById("chat-bar-bottom").scrollIntoView(true);
  }
  //button clicks
  function buttonSendText(sampleText) {
     let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
 
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
+    //$("#textInput").val("");
+    document.getElementById("textInput").value("")
+    //$("#chatbox").append(userHtml);
+    document.getElementById("chatbox").append(userHtml)
+
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
  }
  //send button function
  function sendButton(){
-    getResponse()
+    getResponse();
  }
  function heartButton() {
     buttonSendText("Heart clicked!")
