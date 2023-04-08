@@ -93,7 +93,8 @@
     font-size: 15px;
     font-weight: normal;
     text-align: right;
-    clear:both
+    clear:both;
+    float: right;
 }
 .userText span {
     line-height: 1.2em;
@@ -110,18 +111,19 @@
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 12px;
     text-align: left;
+    float: left;
 }
 .botText{
     line-height: 1.4em;
     display: inline-block;
     background: #e0e0e0;
-    padding:5px;
+    padding:1px;
     border-radius: 5px;
-    border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 1px;
     max-width: 80%;
-    margin-left: 5px;
+    margin-left: 1px;
     animation:floatup .4s forwards;
 }
 @keyframes floatup {

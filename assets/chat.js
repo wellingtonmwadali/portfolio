@@ -15,16 +15,18 @@ for (let i = 0; i < collapse.length; i++){
 //time for chat
 function getTime(){
     let today = new Date();
-    hours = today.getHours();
-    minutes = today.getMinutes();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
     if (hours < 10){
         hours = "0" + hours;
     }
     if (minutes < 10){
         minutes = "0" + minutes;
     }
+    let time = hours + ":" + minutes;
+    return time;
 }
-getTime()
+
 //get the first message
 function firstBotMessage(){
     let firstMessage = "Let's have a quick chat";
@@ -32,7 +34,9 @@ function firstBotMessage(){
     document.getElementById("botStarterMessage").innerHTML = '<p class = "botText"><span>'
     + firstMessage + '</span></p>';
     let time = getTime();
-    $("#chat-timestamp").append(time);
+    let chatTime = document.getElementById("chat-timestamp")
+    chatTime.append(time);
+    //$("#chat-timestamp").append(time);
     document.getElementById("userInput").scrollIntoView(false);
 }
 firstBotMessage();
@@ -47,7 +51,7 @@ function getHardResponse(userText){
     }, 1000)
 }
  //gets text from input box and process it
- function getBotResponse(){
+ function getResponse(){
     let userText = $("#textInput").val();
 
     if (userText == ""){
@@ -58,13 +62,25 @@ function getHardResponse(userText){
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
  }
+ //button clicks
+ function buttonSendText(sampleText) {
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+ }
  //send button function
  function sendButton(){
-    buttonSendText("Heart")
+    getResponse()
  }
+ function heartButton() {
+    buttonSendText("Heart clicked!")
+}
  //send a message
  $("#textInput").keypress(function (e){
-    if (e.which ==13) {
-        getBotResponse();
+    if (e.which == 13) {
+        getResponse();
     }
  });
+
