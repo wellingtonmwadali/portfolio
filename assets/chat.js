@@ -36,7 +36,6 @@ function firstBotMessage(){
     let time = getTime();
     let chatTime = document.getElementById("chat-timestamp")
     chatTime.append(time);
-    //$("#chat-timestamp").append(time);
     document.getElementById("userInput").scrollIntoView(false);
 }
 firstBotMessage();
@@ -44,22 +43,26 @@ firstBotMessage();
 function getHardResponse(userText){
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class = "botText"><span>' + botResponse + '</span></p>';
-    $("#chatbot").append(botHtml);
+    let botChat = document.getElementById("chatbot")
+    botChat.append("botHtml")
+    //$("#chatbot").append(botHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
     setTimeout(() => {
-        getHardResponse(userText);
+        //nothing
     }, 1000)
 }
  //gets text from input box and process it
  function getResponse(){
-    let userText = $("#textInput").val();
-
+    //let userText = $("#textInput").val();
+    let userText = document.getElementById("textInput")
     if (userText == ""){
-        userText = "Enter valid text"
+        userText ="Enter valid text"
     }
     let userHtml = '<p class = "userText"><span>'+ userText + '</span></p>';
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
+    //$("#textInput").val("");
+    //$("#chatbox").append(userHtml);
+    document.getElementById("textInput").value = "";
+    document.getElementById("chatbox").innerHTML += userHtml;
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
  }
  //button clicks
@@ -84,3 +87,4 @@ function getHardResponse(userText){
     }
  });
 
+ 
