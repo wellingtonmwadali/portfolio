@@ -54,7 +54,7 @@ function getHardResponse(userText){
  //gets text from input box and process it
  function getResponse(){
     //let userText = $("#textInput").val();
-    let userText = document.getElementById("textInput")
+    let userText = document.getElementById("textInput").value;
     if (userText == ""){
         userText ="Enter valid text"
     }
