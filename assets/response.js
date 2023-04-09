@@ -5,4 +5,7 @@ function getBotResponse(input){
     }else if("Thank you :)") {
         "ask something else"
     }
+    else{
+        "try berra"
+    }
 }

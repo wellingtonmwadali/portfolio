@@ -83,7 +83,7 @@ function getHardResponse(userText){
 }
  //send a message
  document.getElementById("textInput").addEventListener("keypress", function (event){
-    if (e.which === 13) {
+    if (event.which === 13) {
         getResponse();
     }
  });
