@@ -46,7 +46,6 @@ function getHardResponse(userText){
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class = "botText"><span>' + botResponse + '</span></p>';
     botChat.innerHTML += botHtml;
-    //$("#chatbot").append(botHtml);
     chatBottom.scrollIntoView(true);
     setTimeout(() => {
         //nothing
@@ -54,7 +53,6 @@ function getHardResponse(userText){
 }
  //gets text from input box and process it
  function getResponse(){
-    //let userText = $("#textInput").val();
     let userText = document.getElementById("textInput").value;
     if (userText == ""){
         userText ="Enter valid text"
