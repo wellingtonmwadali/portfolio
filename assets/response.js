@@ -3,10 +3,10 @@ function getBotResponse(input){
     if(input == "hello"){
         return "Hey there!"
     }else if(input == "more") {
-        return "Hi,my abilities are limited to the following prompts :\n-Reveal yourself.\n-Navigation.\n-Game.\n-Profiles.\n-Humour.\n-Kwaheri"
+        return "Hi,my abilities are limited to the following prompts :\n-Intro.\n-Navigation.\n-Game.\n-Profiles.\n-Humour.\n-Kwaheri.Start with a 'hello though"
     }
-    else if(input == "Reveal yourself"){
-        "My name is Chao.I identify myself as a feminine character.My purpose is to act as your guide within my abilities.Use options as prompts for more info "
+    else if(input == "Intro"){
+        return "My name is Chao.I identify myself as a feminine character.My purpose is to act as your guide within my abilities.Use options as prompts for more info "
     }
     else if(input == "Navigation"){
         return "page one or page two ?"
@@ -23,15 +23,31 @@ function getBotResponse(input){
     else if (input == "Profiles"){
         return "github, linkedin or twitter? "
     }
-    else if (input == "github" || "Github"){
+    else if (input == "github"){
         return "https://github.com/wellingtonmwadali"
     }
-    else if (input == "linkedin" || "Linkedin"){
+    else if (input == "linkedin"){
         return "https://www.linkedin.com/in/wellington-mwadali-/"
     }
-    else if (input == "twitter" || "Twitter"){
+    else if (input == "twitter"){
         return "https://twitter.com/mwadzaliii"
     }
-    
-
+    else if (input == "Humour"){
+        return "dry, dark or intelligent?"
+    }
+    else if(input == "dry"){
+        return "Doctor at my check up asked me if I had 'any feelings of depression or anxiety'and I said 'don't we all'and she said 'no'"
+    }
+    else if(input == "dark"){
+        return "Want to turn your depression to profit,wake up at noon so you can only pay for two meals a day "
+    }
+    else if(input == "intelligent"){
+        return "A biologist, a chemist, and a statistician are out hunting. The biologist shoots at a deer and misses 5 feet to the left. The chemist takes a shot and misses 5 feet to the right. The statistician yells, “We got ‘em!”"
+    }
+    else if (input == "Kwaheri"){
+        return "This is where we part ways.Nice time :)"
+    }
+    else{
+        return "Please try again or type 'more' for a list of available prompts"
+    }
 }
