@@ -32,7 +32,7 @@ function getTime(){
 
 //get the first message
 function firstBotMessage(){
-    let firstMessage = "Let's have a quick chat";
+    let firstMessage = "Let's have a quick chat,type 'more' for more info";
     document.getElementById("botStarterMessage").innerHTML = '<p class = "botText"><span>'
     + firstMessage + '</span></p>';
     let time = getTime();
@@ -70,10 +70,7 @@ function getHardResponse(userText){
     document.getElementById("textInput").value = "";
     botChat.innerHTML += userHtml;
     chatBottom.scrollIntoView(true);
-    getHardResponse(sampleText);
  }
- //responses
-
  //send button function
  function sendButton(){
     getResponse();
