@@ -36,17 +36,19 @@ function firstBotMessage(){
     let time = getTime();
     let chatTime = document.getElementById("chat-timestamp")
     chatTime.append(time);
-    document.getElementById("userInput").scrollIntoView(false);
+    let userInput = document.getElementById("userInput");
+    userInput.scrollIntoView(false);
 }
 firstBotMessage();
 //retrieves response
 function getHardResponse(userText){
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class = "botText"><span>' + botResponse + '</span></p>';
-    let botChat = document.getElementById("chatbot")
-    botChat.append("botHtml")
+    let botChat = document.getElementById("chatbot");
+    botChat.append("botHtml");
     //$("#chatbot").append(botHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    let chatBottom =document.getElementById("chat-bar-bottom")
+    chatBottom.scrollIntoView(true);
     setTimeout(() => {
         //nothing
     }, 1000)

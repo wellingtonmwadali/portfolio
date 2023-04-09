@@ -90,17 +90,16 @@
 .userText{
     color: white;
     font-family:Arial, Helvetica, sans-serif ;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: normal;
     text-align: right;
     clear:both;
-    float: right;
 }
 .userText span {
     line-height: 1.2em;
     display: inline-block;
     background: #5ca6fa;
-    padding: 5px;
+    padding: 1px;
     border-radius: 4px;
     border-bottom-right-radius: 2px;
     max-width: 80%;
