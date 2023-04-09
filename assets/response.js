@@ -1,7 +1,8 @@
+//responses
 function getBotResponse(input){
-    if(input == hello){
+    if(input == "hello"){
         return "Hey there!"
-    }else {
+    }else if("Thank you :)") {
         "ask something else"
     }
 }

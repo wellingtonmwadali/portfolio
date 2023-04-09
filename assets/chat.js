@@ -62,6 +62,7 @@ function getHardResponse(userText){
     let userHtml = '<p class = "userText"><span>'+ userText + '</span></p>';
     document.getElementById("textInput").value = "";
     botChat.innerHTML += userHtml;
+    getHardResponse(userText);
  }
  //button clicks
  function buttonSendText(sampleText) {
@@ -69,7 +70,10 @@ function getHardResponse(userText){
     document.getElementById("textInput").value = "";
     botChat.innerHTML += userHtml;
     chatBottom.scrollIntoView(true);
+    getHardResponse(sampleText);
  }
+ //responses
+
  //send button function
  function sendButton(){
     getResponse();
@@ -78,8 +82,8 @@ function getHardResponse(userText){
     buttonSendText("Thank you :)")
 }
  //send a message
- document.getElementById("textInput").keypress(function (e){
-    if (e.which == 13) {
+ document.getElementById("textInput").addEventListener("keypress", function (event){
+    if (e.which === 13) {
         getResponse();
     }
  });
