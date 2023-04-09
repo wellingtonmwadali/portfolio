@@ -1,3 +1,6 @@
+let botChat = document.getElementById("chatbox");
+let userInput = document.getElementById("userInput");
+let chatBottom =document.getElementById("chat-bar-bottom")
 
 //toggle effect on chatbot
 var collapse = document.getElementsByClassName("collapsible");
@@ -30,13 +33,11 @@ function getTime(){
 //get the first message
 function firstBotMessage(){
     let firstMessage = "Let's have a quick chat";
-
     document.getElementById("botStarterMessage").innerHTML = '<p class = "botText"><span>'
     + firstMessage + '</span></p>';
     let time = getTime();
     let chatTime = document.getElementById("chat-timestamp")
     chatTime.append(time);
-    let userInput = document.getElementById("userInput");
     userInput.scrollIntoView(false);
 }
 firstBotMessage();
@@ -44,10 +45,8 @@ firstBotMessage();
 function getHardResponse(userText){
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class = "botText"><span>' + botResponse + '</span></p>';
-    let botChat = document.getElementById("chatbot");
-    botChat.append("botHtml");
+    botChat.innerHTML += botHtml;
     //$("#chatbot").append(botHtml);
-    let chatBottom =document.getElementById("chat-bar-bottom")
     chatBottom.scrollIntoView(true);
     setTimeout(() => {
         //nothing
@@ -61,36 +60,25 @@ function getHardResponse(userText){
         userText ="Enter valid text"
     }
     let userHtml = '<p class = "userText"><span>'+ userText + '</span></p>';
-    //$("#textInput").val("");
-    //$("#chatbox").append(userHtml);
     document.getElementById("textInput").value = "";
-    document.getElementById("chatbox").innerHTML += userHtml;
-   // let chatbot =  document.getElementById("chatbot");
-    //let userMessage = document.createElement('div');
-    //userMessage.innerHTML = userHtml;
-    //chatbot.appendChild(userMessage);
-    //document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    botChat.innerHTML += userHtml;
  }
  //button clicks
  function buttonSendText(sampleText) {
     let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
-
-    //$("#textInput").val("");
-    document.getElementById("textInput").value("")
-    //$("#chatbox").append(userHtml);
-    document.getElementById("chatbox").append(userHtml)
-
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    document.getElementById("textInput").value = "";
+    botChat.innerHTML += userHtml;
+    chatBottom.scrollIntoView(true);
  }
  //send button function
  function sendButton(){
     getResponse();
  }
  function heartButton() {
-    buttonSendText("Heart clicked!")
+    buttonSendText("Thank you :)")
 }
  //send a message
- $("#textInput").keypress(function (e){
+ document.getElementById("textInput").keypress(function (e){
     if (e.which == 13) {
         getResponse();
     }
