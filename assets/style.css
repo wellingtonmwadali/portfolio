@@ -416,7 +416,7 @@ Large window content*/
 	width: 375px;
   }
 #medium-window{
-	background-color:sienna;
+	background-color:rgb(253, 177, 149);
 	height: 100vh;
 }
 .kenya{
@@ -442,8 +442,13 @@ Large window content*/
 	height: 499px;
 	width: 499px;
 }
+.kenya-one:hover{
+	background-image: url("../images/rsz_kenya_2.png");
+	height: 450px;
+	width:313px;
+}
 #small-window{
-	background-color: rgb(115, 105, 98);
+	background-color: rgb(228, 245, 249);
 	height: 100vh;
 }
 .my-city{
@@ -455,10 +460,10 @@ Large window content*/
 	padding:5px
 }
 .nairobi-text{
-	font-family: Arial;
+	font-family: Rocher;
 	font-size: 30px;
 	font-weight: bolder;
-	text-decoration: underline;
+
 }
 .nairobi-container{
 	display: flex;
@@ -497,6 +502,9 @@ Large window content*/
 	background-image: url("../images/manhalf.png");
 	height: 500px;
 	width: 500px;
+  }
+  #half-man:hover{
+	background-image: url("../images/avatar.png");
   }
   .nav-links {
 	display: flex;

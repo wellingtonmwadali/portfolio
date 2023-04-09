@@ -56,27 +56,27 @@ function handleWindowResize() {
     smallWindow.style.display = "none";
     projectWindow.style.display = "none";
   }
-  else if (windowWidth >= 1270) {
+  else if (windowWidth >= 1250) {
     normalWindow.style.display = "none";
     largeWindow.style.display = "block";
     mediumWindow.style.display = "none";
     smallWindow.style.display = "none";
     projectWindow.style.display = "none";
 
-  }else if (windowWidth >= 1240) {
+  }else if (windowWidth >= 1200) {
     normalWindow.style.display = "none";
     largeWindow.style.display = "none";
     mediumWindow.style.display = "block";
     smallWindow.style.display = "none";
     projectWindow.style.display = "none";
-  } else if(windowWidth >=1220){
+  } else if(windowWidth >=1150){
     normalWindow.style.display = "none";
     largeWindow.style.display = "none";
     mediumWindow.style.display = "none";
     smallWindow.style.display = "block";
     projectWindow.style.display = "none";
   }
-  else if(windowWidth >=1200){
+  else if(windowWidth >=1100){
     normalWindow.style.display = "none";
     largeWindow.style.display = "none";
     mediumWindow.style.display = "none";
@@ -84,7 +84,7 @@ function handleWindowResize() {
     projectWindow.style.display = "block";
   }
   else{
-    normalWindow.style.display = "block";
+    normalWindow.style.display = "none";
     largeWindow.style.display = "none";
     mediumWindow.style.display = "none";
     smallWindow.style.display = "none";
