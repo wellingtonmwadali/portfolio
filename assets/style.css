@@ -173,8 +173,6 @@
   }
   .carousel {
 	display: flex;
-	/*justify-content: center;
-	align-items: center;*/
 	height: 500px;
 	width: 500px;
 	overflow: hidden;
@@ -189,7 +187,6 @@
 	animation-duration:12s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	/*z-index: 1;*/
 	animation-fill-mode:none;
 	opacity: 0;
 	transition: opacity 1s ease-in-out;

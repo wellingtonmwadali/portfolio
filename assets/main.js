@@ -1,9 +1,3 @@
-//new fullpage('#fullPage', {
-  //navigation: true,
-  //navigationPosition: 'right',
-  //scrollHorizontally: true
-//});
-
 const inputField = document.getElementById("input-field");
 const submitButton = document.getElementById("submit-button");
 const contentWrapper = document.getElementById("content-wrapper");
@@ -54,7 +48,7 @@ function handleWindowResize() {
   const mediumWindow = document.getElementById("medium-window");
   const smallWindow = document.getElementById("small-window");
   const projectWindow = document.getElementById("project-window");
-  
+  //windows
   if (windowWidth >= 1290) {
     normalWindow.style.display = "block";
     largeWindow.style.display = "none";
