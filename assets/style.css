@@ -416,7 +416,7 @@ Large window content*/
 	width: 375px;
   }
 #medium-window{
-	background-color:rgb(253, 177, 149);
+	background-color:rgb(255, 199, 179);
 	height: 100vh;
 }
 .kenya{
@@ -425,7 +425,10 @@ Large window content*/
 	left: 0.5%;
 }
 .kenya-heading{
-	font-family:Arial;
+	font-family:Rocher;
+	font-size: 20px;
+	font-palette: --Mint
+
 }
 .kenya-image{
 	display: flex;
@@ -479,7 +482,7 @@ Large window content*/
 .nairobi-image{
 	background-image: url("../images/nairobi2.png");
 	height: 400px;
-	width: 600px;
+	width: 400px;
 }
 /*page 3 projects*/
 #project-window{

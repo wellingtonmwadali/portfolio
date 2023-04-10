@@ -18,7 +18,7 @@ function getBotResponse(input){
         return "The page is divided into different sections.To view the complete site resize the width of your screen then view in complete window the game or projects file."
     }
     else if(input == "Game"){
-        return "The rules for the game as stated is you pick a range numbers,feel free to go wild with numbers.The range of numbers will determine the number of attempts.If you exhaust your attempts you will be prompted to try again.GOOD LUCK.Click index after you are done."
+        return "Set full screen.The rules for the game as stated is you pick a range numbers,feel free to go wild with numbers.The range of numbers will determine the number of attempts.If you exhaust your attempts you will be prompted to try again.GOOD LUCK.Click index after you are done."
     }
     else if (input == "Profiles"){
         return "github, linkedin or twitter? "
